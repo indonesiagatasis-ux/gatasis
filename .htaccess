@@ -1,0 +1,15 @@
+# Mencegah konflik folder/file dengan nama yang sama
+Options -MultiViews
+
+RewriteEngine On
+RewriteBase /gatasis/
+
+# Rule untuk link produk: products/nama-produk-slug
+# Pastikan diarahkan ke file detail yang Anda buat (misal: product-detail.php)
+RewriteRule ^products/([a-zA-Z0-9_-]+)$ product-detail.php?slug=$1 [L,QSA]
+
+# Memastikan index.php tetap bisa menerima parameter ?page=
+# Secara default Apache sudah melakukan ini, tapi baris ini menjaminnya
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^$ index.php [L]
