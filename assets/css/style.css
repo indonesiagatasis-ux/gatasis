@@ -1,0 +1,167 @@
+/* --- Global & Typography --- */
+body {
+    background-color: #f8fafc;
+}
+
+/* --- Product Grid Styles (index.php) --- */
+.product-card-minimal {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer; /* Mengubah kursor menjadi tangan saat hover kartu */
+    border-radius: 12px;
+}
+
+.product-card-minimal:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1) !important;
+}
+
+.image-box {
+    background: #ffffff;
+    height: 180px; /* Dioptimalkan untuk grid 4 kolom */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-bottom: 1px solid #f1f5f9;
+    overflow: hidden;
+}
+
+.img-main {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.product-card-minimal:hover .img-main {
+    transform: scale(1.1);
+}
+
+.product-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #334155;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.4rem;
+}
+
+/* --- Button Styling --- */
+.btn-view {
+    font-size: 0.75rem;
+    padding: 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #1e293b;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-view:hover {
+    background: #0062ff;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 98, 255, 0.3);
+}
+
+/* --- Detail Product Styles (detail.php) --- */
+.product-title-gradient {
+    background: linear-gradient(135deg, #0044bb 0%, #00aaff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.btn-cta {
+    transition: all 0.3s ease;
+    border: none;
+    background: linear-gradient(135deg, #0062ff 0%, #0044bb 100%);
+    border-radius: 10px;
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 98, 255, 0.3) !important;
+}
+
+.nav-pills .nav-link {
+    color: #64748b;
+    background: transparent;
+    border: 2px solid transparent;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.nav-pills .nav-link.active {
+    color: #0062ff !important;
+    background-color: transparent !important;
+    border-bottom: 2px solid #0062ff;
+    border-radius: 0;
+}
+
+/* Tombol WhatsApp Minimalis */
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem; /* Ukuran teks dikurangi */
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3) !important;
+}
+
+/* Share Icons */
+.share-icon {
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+
+.share-icon:hover {
+    color: #0062ff !important;
+}
+
+/* Optimasi cetak (Agar saat di-print tombol tidak ikut muncul) */
+@media print {
+    .btn-whatsapp, .share-icon, .btn-sm, nav, footer {
+        display: none !important;
+    }
+}
+
+/* Styling tambahan untuk Button WhatsApp */
+.btn-wa {
+    transition: all 0.3s ease;
+    border: none;
+    background: #25D366;
+}
+.btn-wa:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2) !important;
+}
+.specs-list span {
+    font-size: 0.95rem;
+}
+
+
+/* Gradient Text Style */
+.product-title-gradient {
+    background: linear-gradient(135deg, #0044bb 0%, #00aaff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
